@@ -1,0 +1,2327 @@
+{
+    "AUX_1": [
+        "''",
+        "AUX_2 IN_T GROUP_102",
+        "AUX_2 BETWEEN_T EXPR AND_T EXPR",
+        "IS_T AUX_2 EXPR",
+        "GROUP_101",
+        "AUX_2 GROUP_99 EXPR AUX_6",
+        "COLLATE_T COLLATION_NAME",
+        "OR_T EXPR",
+        "AND_T EXPR",
+        "GROUP_97 EXPR",
+        "GROUP_96 EXPR",
+        "GROUP_95 EXPR",
+        "GROUP_36 EXPR",
+        "GROUP_93 EXPR",
+        "GROUP_92 EXPR"
+    ],
+    "AUX_2": [
+        "''",
+        "NOT_T"
+    ],
+    "AUX_6": [
+        "''",
+        "GROUP_100"
+    ],
+    "START": [
+        "SQL_STMT_LIST"
+    ],
+    "SQL_STMT_LIST": [
+        "SQL_STMT AUX_7 SCOL_T NEWLINE_T"
+    ],
+    "AUX_7": [
+        "''",
+        "GROUP_0 AUX_7"
+    ],
+    "GROUP_0": [
+        "SCOL_T NEWLINE_T SQL_STMT"
+    ],
+    "SQL_STMT": [
+        "AUX_8 GROUP_3"
+    ],
+    "AUX_8": [
+        "''",
+        "GROUP_1"
+    ],
+    "GROUP_1": [
+        "EXPLAIN_T AUX_9"
+    ],
+    "AUX_9": [
+        "''",
+        "GROUP_2"
+    ],
+    "GROUP_2": [
+        "QUERY_T PLAN_T"
+    ],
+    "GROUP_3": [
+        "ALTER_TABLE_STMT",
+        "ANALYZE_STMT",
+        "ATTACH_STMT",
+        "BEGIN_STMT",
+        "COMMIT_STMT",
+        "CREATE_INDEX_STMT",
+        "CREATE_TABLE_STMT",
+        "CREATE_TRIGGER_STMT",
+        "CREATE_VIEW_STMT",
+        "DELETE_STMT",
+        "DELETE_STMT_LIMITED",
+        "DETACH_STMT",
+        "DROP_INDEX_STMT",
+        "DROP_TABLE_STMT",
+        "DROP_TRIGGER_STMT",
+        "DROP_VIEW_STMT",
+        "INSERT_STMT",
+        "PRAGMA_STMT",
+        "REINDEX_STMT",
+        "RELEASE_STMT",
+        "ROLLBACK_STMT",
+        "SAVEPOINT_STMT",
+        "SELECT_STMT",
+        "UPDATE_STMT",
+        "UPDATE_STMT_LIMITED",
+        "VACUUM_STMT"
+    ],
+    "ALTER_TABLE_STMT": [
+        "ALTER_T TABLE_T AUX_10 TABLE_NAME GROUP_5"
+    ],
+    "AUX_10": [
+        "''",
+        "GROUP_4"
+    ],
+    "GROUP_4": [
+        "SCHEMA_NAME DOT_T"
+    ],
+    "GROUP_5": [
+        "RENAME_T TO_T TABLE_NAME",
+        "RENAME_T AUX_11 COLUMN_NAME TO_T COLUMN_NAME",
+        "ADD_T AUX_11 COLUMN_DEF",
+        "DROP_T AUX_11 COLUMN_NAME"
+    ],
+    "AUX_11": [
+        "''",
+        "COLUMN_T"
+    ],
+    "ANALYZE_STMT": [
+        "ANALYZE_T GROUP_6"
+    ],
+    "GROUP_6": [
+        "SCHEMA_NAME",
+        "INDEX_OR_TABLE_NAME",
+        "SCHEMA_NAME DOT_T INDEX_OR_TABLE_NAME"
+    ],
+    "ATTACH_STMT": [
+        "ATTACH_T AUX_14 EXPR AS_T SCHEMA_NAME"
+    ],
+    "AUX_14": [
+        "''",
+        "DATABASE_T"
+    ],
+    "BEGIN_STMT": [
+        "BEGIN_T AUX_15 AUX_16"
+    ],
+    "AUX_15": [
+        "''",
+        "GROUP_7"
+    ],
+    "AUX_16": [
+        "''",
+        "TRANSACTION_T"
+    ],
+    "GROUP_7": [
+        "DEFERRED_T",
+        "IMMEDIATE_T",
+        "EXCLUSIVE_T"
+    ],
+    "COMMIT_STMT": [
+        "GROUP_8 AUX_16"
+    ],
+    "GROUP_8": [
+        "COMMIT_T",
+        "END_T"
+    ],
+    "ROLLBACK_STMT": [
+        "ROLLBACK_T AUX_16 AUX_19"
+    ],
+    "AUX_19": [
+        "''",
+        "GROUP_9"
+    ],
+    "GROUP_9": [
+        "TO_T AUX_20 SAVEPOINT_NAME"
+    ],
+    "AUX_20": [
+        "''",
+        "SAVEPOINT_T"
+    ],
+    "SAVEPOINT_STMT": [
+        "SAVEPOINT_T SAVEPOINT_NAME"
+    ],
+    "RELEASE_STMT": [
+        "RELEASE_T AUX_20 SAVEPOINT_NAME"
+    ],
+    "CREATE_INDEX_STMT": [
+        "CREATE_T AUX_22 INDEX_T AUX_23 AUX_10 INDEX_NAME ON_T TABLE_NAME OPEN_PAR_T INDEXED_COLUMN AUX_25 CLOSE_PAR_T AUX_26"
+    ],
+    "AUX_22": [
+        "''",
+        "UNIQUE_T"
+    ],
+    "AUX_23": [
+        "''",
+        "GROUP_10"
+    ],
+    "AUX_25": [
+        "''",
+        "GROUP_12 AUX_25"
+    ],
+    "AUX_26": [
+        "''",
+        "GROUP_13"
+    ],
+    "GROUP_10": [
+        "IF_T NOT_T EXISTS_T"
+    ],
+    "GROUP_12": [
+        "COMMA_T INDEXED_COLUMN"
+    ],
+    "GROUP_13": [
+        "WHERE_T EXPR"
+    ],
+    "INDEXED_COLUMN": [
+        "GROUP_14 AUX_27 AUX_28"
+    ],
+    "AUX_27": [
+        "''",
+        "GROUP_15"
+    ],
+    "AUX_28": [
+        "''",
+        "GROUP_16"
+    ],
+    "GROUP_14": [
+        "COLUMN_NAME",
+        "EXPR"
+    ],
+    "GROUP_15": [
+        "COLLATE_T COLLATION_NAME"
+    ],
+    "GROUP_16": [
+        "ASC_T",
+        "DESC_T"
+    ],
+    "CREATE_TABLE_STMT": [
+        "CREATE_T AUX_29 TABLE_T AUX_23 AUX_10 TABLE_NAME GROUP_20"
+    ],
+    "AUX_29": [
+        "''",
+        "GROUP_17"
+    ],
+    "GROUP_17": [
+        "TEMP_T",
+        "TEMPORARY_T"
+    ],
+    "GROUP_20": [
+        "AS_T SELECT_STMT",
+        "OPEN_PAR_T COLUMN_DEF AUX_32 AUX_33 CLOSE_PAR_T AUX_34"
+    ],
+    "AUX_32": [
+        "''",
+        "GROUP_21 AUX_32"
+    ],
+    "AUX_33": [
+        "''",
+        "GROUP_22"
+    ],
+    "AUX_34": [
+        "''",
+        "TABLE_OPTIONS"
+    ],
+    "GROUP_21": [
+        "COMMA_T COLUMN_DEF"
+    ],
+    "GROUP_22": [
+        "TABLE_CONSTRAINT AUX_35"
+    ],
+    "AUX_35": [
+        "''",
+        "GROUP_23 AUX_35"
+    ],
+    "GROUP_23": [
+        "COMMA_T TABLE_CONSTRAINT"
+    ],
+    "TABLE_OPTIONS": [
+        "GROUP_24 AUX_36"
+    ],
+    "AUX_36": [
+        "''",
+        "GROUP_25 AUX_36"
+    ],
+    "GROUP_24": [
+        "WITHOUT_T ROWID_T",
+        "STRICT_T"
+    ],
+    "GROUP_25": [
+        "COMMA_T GROUP_24"
+    ],
+    "COLUMN_DEF": [
+        "COLUMN_NAME AUX_37 AUX_38"
+    ],
+    "AUX_37": [
+        "''",
+        "TYPE_NAME"
+    ],
+    "AUX_38": [
+        "''",
+        "COLUMN_CONSTRAINT AUX_38"
+    ],
+    "TYPE_NAME": [
+        "GROUP_27 AUX_39"
+    ],
+    "AUX_39": [
+        "''",
+        "GROUP_28"
+    ],
+    "GROUP_27": [
+        "TYPE_BASE_NAME_T",
+        "NULL_T"
+    ],
+    "GROUP_28": [
+        "OPEN_PAR_T SIGNED_NUMBER CLOSE_PAR_T",
+        "OPEN_PAR_T SIGNED_NUMBER COMMA_T SIGNED_NUMBER CLOSE_PAR_T"
+    ],
+    "COLUMN_CONSTRAINT": [
+        "AUX_40 GROUP_30"
+    ],
+    "AUX_40": [
+        "''",
+        "GROUP_29"
+    ],
+    "GROUP_29": [
+        "CONSTRAINT_T CONSTRAINT_NAME_T"
+    ],
+    "GROUP_30": [
+        "GROUP_31",
+        "NOT_T NULL_T CONFLICT_CLAUSE",
+        "UNIQUE_T CONFLICT_CLAUSE",
+        "CHECK_T OPEN_PAR_T EXPR CLOSE_PAR_T",
+        "DEFAULT_T GROUP_33",
+        "COLLATE_T COLLATION_NAME",
+        "FOREIGN_KEY_CLAUSE",
+        "AUX_41 AS_T OPEN_PAR_T EXPR CLOSE_PAR_T AUX_42"
+    ],
+    "AUX_41": [
+        "''",
+        "GROUP_34"
+    ],
+    "AUX_42": [
+        "''",
+        "GROUP_35"
+    ],
+    "GROUP_31": [
+        "PRIMARY_T KEY_T AUX_28 CONFLICT_CLAUSE AUX_44"
+    ],
+    "AUX_44": [
+        "''",
+        "AUTOINCREMENT_T"
+    ],
+    "GROUP_33": [
+        "OPEN_PAR_T EXPR CLOSE_PAR_T",
+        "LITERAL_VALUE",
+        "SIGNED_NUMBER"
+    ],
+    "GROUP_34": [
+        "GENERATED_T ALWAYS_T"
+    ],
+    "GROUP_35": [
+        "STORED_T",
+        "VIRTUAL_T"
+    ],
+    "SIGNED_NUMBER": [
+        "AUX_45 NUMERIC_LITERAL_T"
+    ],
+    "AUX_45": [
+        "''",
+        "GROUP_36"
+    ],
+    "GROUP_36": [
+        "PLUS_T",
+        "MINUS_T"
+    ],
+    "TABLE_CONSTRAINT": [
+        "AUX_40 GROUP_38"
+    ],
+    "GROUP_38": [
+        "GROUP_39 OPEN_PAR_T INDEXED_COLUMN AUX_47 CLOSE_PAR_T CONFLICT_CLAUSE",
+        "CHECK_T OPEN_PAR_T EXPR CLOSE_PAR_T",
+        "FOREIGN_T KEY_T OPEN_PAR_T COLUMN_NAME AUX_48 CLOSE_PAR_T FOREIGN_KEY_CLAUSE"
+    ],
+    "AUX_47": [
+        "''",
+        "GROUP_12 AUX_47"
+    ],
+    "AUX_48": [
+        "''",
+        "GROUP_41 AUX_48"
+    ],
+    "GROUP_39": [
+        "PRIMARY_T KEY_T",
+        "UNIQUE_T"
+    ],
+    "GROUP_41": [
+        "COMMA_T COLUMN_NAME"
+    ],
+    "FOREIGN_KEY_CLAUSE": [
+        "REFERENCES_T TABLE_NAME AUX_49 AUX_50 AUX_51"
+    ],
+    "AUX_49": [
+        "''",
+        "GROUP_42"
+    ],
+    "AUX_50": [
+        "''",
+        "GROUP_44 AUX_50"
+    ],
+    "AUX_51": [
+        "''",
+        "GROUP_48"
+    ],
+    "GROUP_42": [
+        "OPEN_PAR_T COLUMN_NAME AUX_52 CLOSE_PAR_T"
+    ],
+    "AUX_52": [
+        "''",
+        "GROUP_41 AUX_52"
+    ],
+    "GROUP_44": [
+        "ON_T GROUP_45 GROUP_46"
+    ],
+    "GROUP_45": [
+        "DELETE_T",
+        "UPDATE_T"
+    ],
+    "GROUP_46": [
+        "SET_T GROUP_47",
+        "CASCADE_T",
+        "RESTRICT_T",
+        "NO_T ACTION_T"
+    ],
+    "GROUP_47": [
+        "NULL_T",
+        "DEFAULT_T"
+    ],
+    "GROUP_48": [
+        "AUX_2 DEFERRABLE_T AUX_54"
+    ],
+    "AUX_54": [
+        "''",
+        "GROUP_49"
+    ],
+    "GROUP_49": [
+        "INITIALLY_T GROUP_50"
+    ],
+    "GROUP_50": [
+        "DEFERRED_T",
+        "IMMEDIATE_T"
+    ],
+    "CONFLICT_CLAUSE": [
+        "AUX_55"
+    ],
+    "AUX_55": [
+        "''",
+        "GROUP_51"
+    ],
+    "GROUP_51": [
+        "ON_T CONFLICT_T GROUP_52"
+    ],
+    "GROUP_52": [
+        "ROLLBACK_T",
+        "ABORT_T",
+        "FAIL_T",
+        "IGNORE_T",
+        "REPLACE_T"
+    ],
+    "CREATE_TRIGGER_STMT": [
+        "CREATE_T AUX_29 TRIGGER_T AUX_23 AUX_10 TRIGGER_NAME AUX_59 GROUP_57 ON_T TABLE_NAME AUX_60 AUX_61 BEGIN_T AUX_62 END_T"
+    ],
+    "AUX_59": [
+        "''",
+        "GROUP_56"
+    ],
+    "AUX_60": [
+        "''",
+        "GROUP_61"
+    ],
+    "AUX_61": [
+        "''",
+        "GROUP_62"
+    ],
+    "AUX_62": [
+        "GROUP_63",
+        "GROUP_63 AUX_62"
+    ],
+    "GROUP_56": [
+        "BEFORE_T",
+        "AFTER_T",
+        "INSTEAD_T OF_T"
+    ],
+    "GROUP_57": [
+        "DELETE_T",
+        "INSERT_T",
+        "GROUP_58"
+    ],
+    "GROUP_58": [
+        "UPDATE_T AUX_63"
+    ],
+    "AUX_63": [
+        "''",
+        "GROUP_59"
+    ],
+    "GROUP_59": [
+        "OF_T COLUMN_NAME AUX_64"
+    ],
+    "AUX_64": [
+        "''",
+        "GROUP_41 AUX_64"
+    ],
+    "GROUP_61": [
+        "FOR_T EACH_T ROW_T"
+    ],
+    "GROUP_62": [
+        "WHEN_T EXPR"
+    ],
+    "GROUP_63": [
+        "GROUP_64 SCOL_T"
+    ],
+    "GROUP_64": [
+        "UPDATE_STMT",
+        "INSERT_STMT",
+        "DELETE_STMT",
+        "SELECT_STMT"
+    ],
+    "CREATE_VIEW_STMT": [
+        "CREATE_T AUX_29 VIEW_T AUX_23 AUX_10 VIEW_NAME AUX_68 AS_T SELECT_STMT"
+    ],
+    "AUX_68": [
+        "''",
+        "GROUP_68"
+    ],
+    "GROUP_68": [
+        "OPEN_PAR_T COLUMN_NAME AUX_69 CLOSE_PAR_T"
+    ],
+    "AUX_69": [
+        "''",
+        "GROUP_41 AUX_69"
+    ],
+    "COMMON_TABLE_EXPRESSION": [
+        "TABLE_NAME AUX_70 AS_T AUX_71 OPEN_PAR_T SELECT_STMT CLOSE_PAR_T"
+    ],
+    "AUX_70": [
+        "''",
+        "GROUP_70"
+    ],
+    "AUX_71": [
+        "''",
+        "GROUP_72"
+    ],
+    "GROUP_70": [
+        "OPEN_PAR_T COLUMN_NAME AUX_72 CLOSE_PAR_T"
+    ],
+    "AUX_72": [
+        "''",
+        "GROUP_41 AUX_72"
+    ],
+    "GROUP_72": [
+        "AUX_2 MATERIALIZED_T"
+    ],
+    "DELETE_STMT": [
+        "AUX_74 DELETE_T FROM_T QUALIFIED_TABLE_NAME AUX_26 AUX_76"
+    ],
+    "AUX_74": [
+        "''",
+        "GROUP_73"
+    ],
+    "AUX_76": [
+        "''",
+        "RETURNING_CLAUSE"
+    ],
+    "GROUP_73": [
+        "WITH_T AUX_77 COMMON_TABLE_EXPRESSION AUX_78"
+    ],
+    "AUX_77": [
+        "''",
+        "RECURSIVE_T"
+    ],
+    "AUX_78": [
+        "''",
+        "GROUP_74 AUX_78"
+    ],
+    "GROUP_74": [
+        "COMMA_T COMMON_TABLE_EXPRESSION"
+    ],
+    "DELETE_STMT_LIMITED": [
+        "AUX_79 DELETE_T FROM_T QUALIFIED_TABLE_NAME AUX_26 AUX_76 AUX_82"
+    ],
+    "AUX_79": [
+        "''",
+        "GROUP_76"
+    ],
+    "AUX_82": [
+        "''",
+        "GROUP_79"
+    ],
+    "GROUP_76": [
+        "WITH_T AUX_77 COMMON_TABLE_EXPRESSION AUX_84"
+    ],
+    "AUX_84": [
+        "''",
+        "GROUP_74 AUX_84"
+    ],
+    "GROUP_79": [
+        "ORDER_T BY_T ORDERING_TERM AUX_85 LIMIT_T EXPR AUX_86"
+    ],
+    "AUX_85": [
+        "''",
+        "GROUP_80 AUX_85"
+    ],
+    "AUX_86": [
+        "''",
+        "GROUP_81"
+    ],
+    "GROUP_80": [
+        "COMMA_T ORDERING_TERM"
+    ],
+    "GROUP_81": [
+        "OFFSET_T EXPR",
+        "COMMA_T EXPR"
+    ],
+    "DETACH_STMT": [
+        "DETACH_T AUX_14 SCHEMA_NAME"
+    ],
+    "DROP_INDEX_STMT": [
+        "DROP_T INDEX_T AUX_88 AUX_10 INDEX_NAME"
+    ],
+    "AUX_88": [
+        "''",
+        "GROUP_82"
+    ],
+    "GROUP_82": [
+        "IF_T EXISTS_T"
+    ],
+    "DROP_TABLE_STMT": [
+        "DROP_T TABLE_T AUX_88 AUX_10 TABLE_NAME"
+    ],
+    "DROP_TRIGGER_STMT": [
+        "DROP_T TRIGGER_T AUX_88 AUX_10 TRIGGER_NAME"
+    ],
+    "DROP_VIEW_STMT": [
+        "DROP_T VIEW_T AUX_88 AUX_10 VIEW_NAME"
+    ],
+    "EXPR": [
+        "LITERAL_VALUE AUX_1",
+        "AUX_96 COLUMN_NAME AUX_1",
+        "UNARY_OPERATOR EXPR AUX_1",
+        "FUNCTION AUX_1",
+        "OPEN_PAR_T EXPR AUX_97 CLOSE_PAR_T AUX_1",
+        "CAST_T OPEN_PAR_T EXPR AS_T TYPE_NAME CLOSE_PAR_T AUX_1",
+        "AUX_98 OPEN_PAR_T SELECT_STMT CLOSE_PAR_T AUX_1",
+        "CASE_T AUX_99 AUX_100 AUX_101 END_T AUX_1",
+        "RAISE_FUNCTION AUX_1"
+    ],
+    "AUX_96": [
+        "''",
+        "GROUP_90"
+    ],
+    "AUX_97": [
+        "''",
+        "GROUP_98 AUX_97"
+    ],
+    "AUX_98": [
+        "''",
+        "GROUP_106"
+    ],
+    "AUX_99": [
+        "''",
+        "EXPR"
+    ],
+    "AUX_100": [
+        "GROUP_108",
+        "GROUP_108 AUX_100"
+    ],
+    "AUX_101": [
+        "''",
+        "GROUP_109"
+    ],
+    "GROUP_90": [
+        "AUX_10 TABLE_NAME DOT_T"
+    ],
+    "GROUP_92": [
+        "PIPE2_",
+        "R_ARR1_",
+        "R_ARR2_"
+    ],
+    "GROUP_93": [
+        "STAR_T",
+        "DIV_T",
+        "MOD_T"
+    ],
+    "GROUP_95": [
+        "LT2_",
+        "GT2_",
+        "AMP_T",
+        "PIPE_T"
+    ],
+    "GROUP_96": [
+        "LT_T",
+        "LT_EQ_T",
+        "GT_T",
+        "GT_EQ_T"
+    ],
+    "GROUP_97": [
+        "ASSIGN_T",
+        "EQ_T",
+        "NOT_EQ1_",
+        "NOT_EQ2_",
+        "IS_T",
+        "IS_T NOT_T",
+        "IN_T",
+        "LIKE_T",
+        "GLOB_T",
+        "MATCH_T",
+        "REGEXP_T"
+    ],
+    "GROUP_98": [
+        "COMMA_T EXPR"
+    ],
+    "GROUP_99": [
+        "LIKE_T",
+        "GLOB_T",
+        "REGEXP_T",
+        "MATCH_T"
+    ],
+    "GROUP_100": [
+        "ESCAPE_T EXPR"
+    ],
+    "GROUP_101": [
+        "ISNULL_T",
+        "NOTNULL_T",
+        "NOT_T NULL_T"
+    ],
+    "GROUP_102": [
+        "OPEN_PAR_T AUX_103 CLOSE_PAR_T",
+        "AUX_10 TABLE_NAME"
+    ],
+    "AUX_103": [
+        "''",
+        "GROUP_103"
+    ],
+    "GROUP_103": [
+        "SELECT_STMT",
+        "EXPR AUX_105"
+    ],
+    "AUX_105": [
+        "''",
+        "GROUP_98 AUX_105"
+    ],
+    "GROUP_106": [
+        "AUX_106 EXISTS_T"
+    ],
+    "AUX_106": [
+        "''",
+        "GROUP_107"
+    ],
+    "GROUP_107": [
+        "NOT_T"
+    ],
+    "GROUP_108": [
+        "WHEN_T EXPR THEN_T EXPR"
+    ],
+    "GROUP_109": [
+        "ELSE_T EXPR"
+    ],
+    "RAISE_FUNCTION": [
+        "RAISE_T OPEN_PAR_T GROUP_110 CLOSE_PAR_T"
+    ],
+    "GROUP_110": [
+        "IGNORE_T",
+        "GROUP_111 COMMA_T ERROR_MESSAGE"
+    ],
+    "GROUP_111": [
+        "ROLLBACK_T",
+        "ABORT_T",
+        "FAIL_T"
+    ],
+    "LITERAL_VALUE": [
+        "NUMERIC_LITERAL_T",
+        "STRING_LITERAL_T",
+        "BLOB_LITERAL_T",
+        "NULL_T",
+        "TRUE_T",
+        "FALSE_T",
+        "CURRENT_TIME_T",
+        "CURRENT_DATE_T",
+        "CURRENT_TIMESTAMP__T"
+    ],
+    "INSERT_STMT": [
+        "AUX_107 GROUP_115 INTO_T AUX_10 TABLE_NAME AUX_109 AUX_110 GROUP_122 AUX_76"
+    ],
+    "AUX_107": [
+        "''",
+        "GROUP_112"
+    ],
+    "AUX_109": [
+        "''",
+        "GROUP_119"
+    ],
+    "AUX_110": [
+        "''",
+        "GROUP_120"
+    ],
+    "GROUP_112": [
+        "WITH_T AUX_112 COMMON_TABLE_EXPRESSION AUX_113"
+    ],
+    "AUX_112": [
+        "''",
+        "GROUP_113"
+    ],
+    "AUX_113": [
+        "''",
+        "GROUP_74 AUX_113"
+    ],
+    "GROUP_113": [
+        "RECURSIVE_T"
+    ],
+    "GROUP_115": [
+        "INSERT_T",
+        "REPLACE_T",
+        "GROUP_116"
+    ],
+    "GROUP_116": [
+        "INSERT_T OR_T GROUP_52"
+    ],
+    "GROUP_119": [
+        "AS_T TABLE_NAME"
+    ],
+    "GROUP_120": [
+        "OPEN_PAR_T COLUMN_NAME AUX_114 CLOSE_PAR_T"
+    ],
+    "AUX_114": [
+        "''",
+        "GROUP_41 AUX_114"
+    ],
+    "GROUP_122": [
+        "GROUP_123",
+        "SELECT_STMT AUX_115",
+        "DEFAULT_T VALUES_T"
+    ],
+    "AUX_115": [
+        "''",
+        "UPSERT_CLAUSE"
+    ],
+    "GROUP_123": [
+        "VALUES_T GROUP_124 AUX_116 AUX_115"
+    ],
+    "AUX_116": [
+        "''",
+        "GROUP_126 AUX_116"
+    ],
+    "GROUP_124": [
+        "OPEN_PAR_T EXPR AUX_118 CLOSE_PAR_T"
+    ],
+    "AUX_118": [
+        "''",
+        "GROUP_98 AUX_118"
+    ],
+    "GROUP_126": [
+        "COMMA_T OPEN_PAR_T EXPR AUX_119 CLOSE_PAR_T"
+    ],
+    "AUX_119": [
+        "''",
+        "GROUP_98 AUX_119"
+    ],
+    "UPSERT_CLAUSE": [
+        "ON_T CONFLICT_T AUX_120 DO_T GROUP_131"
+    ],
+    "AUX_120": [
+        "''",
+        "GROUP_128"
+    ],
+    "GROUP_128": [
+        "OPEN_PAR_T INDEXED_COLUMN AUX_121 CLOSE_PAR_T AUX_26"
+    ],
+    "AUX_121": [
+        "''",
+        "GROUP_12 AUX_121"
+    ],
+    "GROUP_131": [
+        "NOTHING_T",
+        "UPDATE_T SET_T GROUP_132"
+    ],
+    "GROUP_132": [
+        "GROUP_133 ASSIGN_T EXPR AUX_123 AUX_26"
+    ],
+    "AUX_123": [
+        "''",
+        "GROUP_134 AUX_123"
+    ],
+    "GROUP_133": [
+        "COLUMN_NAME",
+        "COLUMN_NAME_LIST"
+    ],
+    "GROUP_134": [
+        "COMMA_T GROUP_133 ASSIGN_T EXPR"
+    ],
+    "PRAGMA_STMT": [
+        "PRAGMA_T AUX_10 PRAGMA_NAME AUX_126"
+    ],
+    "AUX_126": [
+        "''",
+        "GROUP_138"
+    ],
+    "GROUP_138": [
+        "ASSIGN_T PRAGMA_VALUE",
+        "OPEN_PAR_T PRAGMA_VALUE CLOSE_PAR_T"
+    ],
+    "PRAGMA_VALUE": [
+        "SIGNED_NUMBER",
+        "PRAGMA_SPECIAL_VALUE_T",
+        "DELETE_T",
+        "EXCLUSIVE_T",
+        "FULL_T"
+    ],
+    "REINDEX_STMT": [
+        "REINDEX_T AUX_127"
+    ],
+    "AUX_127": [
+        "''",
+        "GROUP_139"
+    ],
+    "GROUP_139": [
+        "COLLATION_NAME",
+        "GROUP_140"
+    ],
+    "GROUP_140": [
+        "AUX_10 GROUP_142"
+    ],
+    "GROUP_142": [
+        "TABLE_NAME",
+        "INDEX_NAME"
+    ],
+    "SELECT_STMT": [
+        "GROUP_143",
+        "GROUP_152"
+    ],
+    "GROUP_143": [
+        "AUX_129 SELECT_CORE AUX_130 AUX_131 AUX_132"
+    ],
+    "AUX_129": [
+        "''",
+        "GROUP_144"
+    ],
+    "AUX_130": [
+        "''",
+        "GROUP_146 AUX_130"
+    ],
+    "AUX_131": [
+        "''",
+        "GROUP_147"
+    ],
+    "AUX_132": [
+        "''",
+        "GROUP_149"
+    ],
+    "GROUP_144": [
+        "WITH_T AUX_77 COMMON_TABLE_EXPRESSION AUX_134"
+    ],
+    "AUX_134": [
+        "''",
+        "GROUP_74 AUX_134"
+    ],
+    "GROUP_146": [
+        "COMPOUND_OPERATOR SELECT_CORE"
+    ],
+    "GROUP_147": [
+        "ORDER_T BY_T ORDERING_TERM AUX_135"
+    ],
+    "AUX_135": [
+        "''",
+        "GROUP_80 AUX_135"
+    ],
+    "GROUP_149": [
+        "LIMIT_T EXPR AUX_136"
+    ],
+    "AUX_136": [
+        "''",
+        "GROUP_150"
+    ],
+    "GROUP_150": [
+        "GROUP_151 EXPR"
+    ],
+    "GROUP_151": [
+        "OFFSET_T",
+        "COMMA_T"
+    ],
+    "GROUP_152": [
+        "AUX_137 VALUES_STMT AUX_138"
+    ],
+    "AUX_137": [
+        "''",
+        "GROUP_153"
+    ],
+    "AUX_138": [
+        "''",
+        "GROUP_155 AUX_138"
+    ],
+    "GROUP_153": [
+        "WITH_T AUX_77 COMMON_TABLE_EXPRESSION AUX_140"
+    ],
+    "AUX_140": [
+        "''",
+        "GROUP_74 AUX_140"
+    ],
+    "GROUP_155": [
+        "COMPOUND_OPERATOR VALUES_STMT"
+    ],
+    "SELECT_CORE": [
+        "SELECT_T AUX_141 RESULT_COLUMN AUX_142 AUX_143 AUX_26 AUX_145 AUX_146"
+    ],
+    "AUX_141": [
+        "''",
+        "GROUP_156"
+    ],
+    "AUX_142": [
+        "''",
+        "GROUP_157 AUX_142"
+    ],
+    "AUX_143": [
+        "''",
+        "GROUP_158"
+    ],
+    "AUX_145": [
+        "''",
+        "GROUP_163"
+    ],
+    "AUX_146": [
+        "''",
+        "GROUP_166"
+    ],
+    "GROUP_156": [
+        "DISTINCT_T",
+        "ALL_T"
+    ],
+    "GROUP_157": [
+        "COMMA_T RESULT_COLUMN"
+    ],
+    "GROUP_158": [
+        "FROM_T GROUP_159"
+    ],
+    "GROUP_159": [
+        "GROUP_160",
+        "JOIN_CLAUSE"
+    ],
+    "GROUP_160": [
+        "TABLE_OR_SUBQUERY GROUP_161"
+    ],
+    "GROUP_161": [
+        "COMMA_T TABLE_OR_SUBQUERY"
+    ],
+    "GROUP_163": [
+        "GROUP_T BY_T EXPR AUX_147 AUX_148"
+    ],
+    "AUX_147": [
+        "''",
+        "GROUP_98 AUX_147"
+    ],
+    "AUX_148": [
+        "''",
+        "GROUP_165"
+    ],
+    "GROUP_165": [
+        "HAVING_T EXPR"
+    ],
+    "GROUP_166": [
+        "WINDOW_T WINDOW_NAME AS_T WINDOW_DEFN AUX_149"
+    ],
+    "AUX_149": [
+        "''",
+        "GROUP_167 AUX_149"
+    ],
+    "GROUP_167": [
+        "COMMA_T WINDOW_NAME AS_T WINDOW_DEFN"
+    ],
+    "VALUES_STMT": [
+        "VALUES_T OPEN_PAR_T EXPR AUX_150 CLOSE_PAR_T AUX_151"
+    ],
+    "AUX_150": [
+        "''",
+        "GROUP_98 AUX_150"
+    ],
+    "AUX_151": [
+        "''",
+        "GROUP_169 AUX_151"
+    ],
+    "GROUP_169": [
+        "COMMA_T OPEN_PAR_T EXPR AUX_152 CLOSE_PAR_T"
+    ],
+    "AUX_152": [
+        "''",
+        "GROUP_98 AUX_152"
+    ],
+    "JOIN_CLAUSE": [
+        "TABLE_OR_SUBQUERY AUX_153"
+    ],
+    "AUX_153": [
+        "''",
+        "GROUP_171 AUX_153"
+    ],
+    "GROUP_171": [
+        "JOIN_OPERATOR TABLE_OR_SUBQUERY JOIN_CONSTRAINT"
+    ],
+    "TABLE_OR_SUBQUERY": [
+        "GROUP_172",
+        "OPEN_PAR_T SELECT_STMT CLOSE_PAR_T AUX_154",
+        "OPEN_PAR_T GROUP_179 CLOSE_PAR_T"
+    ],
+    "AUX_154": [
+        "''",
+        "GROUP_174"
+    ],
+    "GROUP_172": [
+        "AUX_10 TABLE_NAME AUX_154 AUX_157"
+    ],
+    "AUX_157": [
+        "''",
+        "GROUP_175"
+    ],
+    "GROUP_174": [
+        "AUX_158 TABLE_NAME"
+    ],
+    "AUX_158": [
+        "''",
+        "AS_T"
+    ],
+    "GROUP_175": [
+        "GROUP_176",
+        "GROUP_177"
+    ],
+    "GROUP_176": [
+        "INDEXED_T BY_T INDEX_NAME"
+    ],
+    "GROUP_177": [
+        "NOT_T INDEXED_T"
+    ],
+    "GROUP_179": [
+        "GROUP_180",
+        "JOIN_CLAUSE"
+    ],
+    "GROUP_180": [
+        "TABLE_OR_SUBQUERY AUX_160"
+    ],
+    "AUX_160": [
+        "''",
+        "GROUP_161 AUX_160"
+    ],
+    "RESULT_COLUMN": [
+        "STAR_T",
+        "TABLE_NAME DOT_T STAR_T",
+        "EXPR AUX_161"
+    ],
+    "AUX_161": [
+        "''",
+        "GROUP_182"
+    ],
+    "GROUP_182": [
+        "AUX_158 COLUMN_ALIAS"
+    ],
+    "JOIN_OPERATOR": [
+        "COMMA_T",
+        "AUX_163 AUX_164 JOIN_T"
+    ],
+    "AUX_163": [
+        "''",
+        "NATURAL_T"
+    ],
+    "AUX_164": [
+        "''",
+        "GROUP_183"
+    ],
+    "GROUP_183": [
+        "LEFT_T AUX_165",
+        "INNER_T",
+        "CROSS_T"
+    ],
+    "AUX_165": [
+        "''",
+        "OUTER_T"
+    ],
+    "JOIN_CONSTRAINT": [
+        "AUX_166"
+    ],
+    "AUX_166": [
+        "''",
+        "GROUP_184"
+    ],
+    "GROUP_184": [
+        "ON_T EXPR",
+        "USING_T OPEN_PAR_T COLUMN_NAME AUX_167 CLOSE_PAR_T"
+    ],
+    "AUX_167": [
+        "''",
+        "GROUP_41 AUX_167"
+    ],
+    "COMPOUND_OPERATOR": [
+        "GROUP_186",
+        "INTERSECT_T",
+        "EXCEPT_T"
+    ],
+    "GROUP_186": [
+        "UNION_T AUX_168"
+    ],
+    "AUX_168": [
+        "''",
+        "ALL_T"
+    ],
+    "UPDATE_STMT": [
+        "AUX_169 UPDATE_T AUX_170 QUALIFIED_TABLE_NAME SET_T GROUP_133 ASSIGN_T EXPR AUX_171 AUX_172 AUX_26 AUX_76"
+    ],
+    "AUX_169": [
+        "''",
+        "GROUP_187"
+    ],
+    "AUX_170": [
+        "''",
+        "GROUP_189"
+    ],
+    "AUX_171": [
+        "''",
+        "GROUP_134 AUX_171"
+    ],
+    "AUX_172": [
+        "''",
+        "GROUP_194"
+    ],
+    "GROUP_187": [
+        "WITH_T AUX_77 COMMON_TABLE_EXPRESSION AUX_176"
+    ],
+    "AUX_176": [
+        "''",
+        "GROUP_74 AUX_176"
+    ],
+    "GROUP_189": [
+        "OR_T GROUP_52"
+    ],
+    "GROUP_194": [
+        "FROM_T GROUP_195"
+    ],
+    "GROUP_195": [
+        "GROUP_196",
+        "JOIN_CLAUSE"
+    ],
+    "GROUP_196": [
+        "TABLE_OR_SUBQUERY AUX_177"
+    ],
+    "AUX_177": [
+        "''",
+        "GROUP_161 AUX_177"
+    ],
+    "COLUMN_NAME_LIST": [
+        "OPEN_PAR_T COLUMN_NAME AUX_178 CLOSE_PAR_T"
+    ],
+    "AUX_178": [
+        "''",
+        "GROUP_41 AUX_178"
+    ],
+    "UPDATE_STMT_LIMITED": [
+        "AUX_179 UPDATE_T AUX_170 QUALIFIED_TABLE_NAME SET_T GROUP_133 ASSIGN_T EXPR AUX_181 AUX_182 AUX_26 AUX_76 AUX_185 AUX_132"
+    ],
+    "AUX_179": [
+        "''",
+        "GROUP_200"
+    ],
+    "AUX_181": [
+        "''",
+        "GROUP_134 AUX_181"
+    ],
+    "AUX_182": [
+        "''",
+        "GROUP_207"
+    ],
+    "AUX_185": [
+        "''",
+        "GROUP_212"
+    ],
+    "GROUP_200": [
+        "WITH_T AUX_77 COMMON_TABLE_EXPRESSION AUX_188"
+    ],
+    "AUX_188": [
+        "''",
+        "GROUP_74 AUX_188"
+    ],
+    "GROUP_207": [
+        "FROM_T GROUP_208"
+    ],
+    "GROUP_208": [
+        "GROUP_209",
+        "JOIN_CLAUSE"
+    ],
+    "GROUP_209": [
+        "TABLE_OR_SUBQUERY AUX_189"
+    ],
+    "AUX_189": [
+        "''",
+        "GROUP_161 AUX_189"
+    ],
+    "GROUP_212": [
+        "ORDER_T BY_T ORDERING_TERM AUX_190"
+    ],
+    "AUX_190": [
+        "''",
+        "GROUP_80 AUX_190"
+    ],
+    "QUALIFIED_TABLE_NAME": [
+        "AUX_10 TABLE_NAME AUX_109 AUX_194"
+    ],
+    "AUX_194": [
+        "''",
+        "GROUP_219"
+    ],
+    "GROUP_219": [
+        "INDEXED_T BY_T INDEX_NAME",
+        "NOT_T INDEXED_T"
+    ],
+    "VACUUM_STMT": [
+        "VACUUM_T AUX_195"
+    ],
+    "AUX_195": [
+        "''",
+        "SCHEMA_NAME"
+    ],
+    "FILTER_CLAUSE": [
+        "FILTER_T OPEN_PAR_T WHERE_T EXPR CLOSE_PAR_T"
+    ],
+    "WINDOW_DEFN": [
+        "OPEN_PAR_T AUX_196 AUX_197 AUX_198 AUX_199 CLOSE_PAR_T"
+    ],
+    "AUX_196": [
+        "''",
+        "WINDOW_NAME"
+    ],
+    "AUX_197": [
+        "''",
+        "GROUP_220"
+    ],
+    "AUX_198": [
+        "''",
+        "GROUP_222"
+    ],
+    "AUX_199": [
+        "''",
+        "FRAME_SPEC"
+    ],
+    "GROUP_220": [
+        "PARTITION_T BY_T EXPR AUX_200"
+    ],
+    "AUX_200": [
+        "''",
+        "GROUP_98 AUX_200"
+    ],
+    "GROUP_222": [
+        "ORDER_T BY_T ORDERING_TERM AUX_201"
+    ],
+    "AUX_201": [
+        "''",
+        "GROUP_80 AUX_201"
+    ],
+    "FRAME_SPEC": [
+        "GROUP_224 GROUP_225 AUX_202"
+    ],
+    "AUX_202": [
+        "''",
+        "GROUP_229"
+    ],
+    "GROUP_224": [
+        "RANGE_T",
+        "ROWS_T",
+        "GROUPS_T"
+    ],
+    "GROUP_225": [
+        "GROUP_226",
+        "UNBOUNDED_T PRECEDING_T",
+        "EXPR PRECEDING_T",
+        "CURRENT_T ROW_T"
+    ],
+    "GROUP_226": [
+        "BETWEEN_T GROUP_227 AND_T GROUP_228"
+    ],
+    "GROUP_227": [
+        "UNBOUNDED_T PRECEDING_T",
+        "EXPR PRECEDING_T",
+        "CURRENT_T ROW_T",
+        "EXPR FOLLOWING_T"
+    ],
+    "GROUP_228": [
+        "EXPR PRECEDING_T",
+        "CURRENT_T ROW_T",
+        "EXPR FOLLOWING_T",
+        "UNBOUNDED_T FOLLOWING_T"
+    ],
+    "GROUP_229": [
+        "EXCLUDE_T GROUP_230"
+    ],
+    "GROUP_230": [
+        "NO_T OTHERS_T",
+        "CURRENT_T ROW_T",
+        "GROUP_T",
+        "TIES_T"
+    ],
+    "ORDERING_TERM": [
+        "EXPR AUX_27 AUX_28 AUX_205"
+    ],
+    "AUX_205": [
+        "''",
+        "GROUP_233"
+    ],
+    "GROUP_233": [
+        "NULLS_T GROUP_234"
+    ],
+    "GROUP_234": [
+        "FIRST_T",
+        "LAST_T"
+    ],
+    "RETURNING_CLAUSE": [
+        "RETURNING_T GROUP_235 AUX_206"
+    ],
+    "AUX_206": [
+        "''",
+        "GROUP_238 AUX_206"
+    ],
+    "GROUP_235": [
+        "GROUP_236",
+        "STAR_T"
+    ],
+    "GROUP_236": [
+        "EXPR AUX_161"
+    ],
+    "GROUP_238": [
+        "COMMA_T GROUP_235"
+    ],
+    "UNARY_OPERATOR": [
+        "MINUS_T",
+        "PLUS_T",
+        "TILDE_T",
+        "NOT_T"
+    ],
+    "ERROR_MESSAGE": [
+        "ERROR_MESSAGE_T"
+    ],
+    "COLUMN_ALIAS": [
+        "COLUMN_NAME"
+    ],
+    "SCHEMA_NAME": [
+        "SCHEMA_NAME_T"
+    ],
+    "TABLE_NAME": [
+        "TABLE_NAME_T"
+    ],
+    "INDEX_OR_TABLE_NAME": [
+        "TABLE_NAME_T",
+        "INDEX_NAME_T"
+    ],
+    "COLUMN_NAME": [
+        "COLUMN_NAME_T"
+    ],
+    "COLLATION_NAME": [
+        "COLLATION_NAME_T"
+    ],
+    "INDEX_NAME": [
+        "INDEX_NAME_T"
+    ],
+    "TRIGGER_NAME": [
+        "TRIGGER_NAME_T"
+    ],
+    "VIEW_NAME": [
+        "VIEW_NAME_T"
+    ],
+    "PRAGMA_NAME": [
+        "PRAGMA_NAME_T"
+    ],
+    "SAVEPOINT_NAME": [
+        "SAVEPOINT_NAME_T"
+    ],
+    "WINDOW_NAME": [
+        "WINDOW_NAME_T"
+    ],
+    "FUNCTION": [
+        "SIMPLE_FUNC",
+        "AGGREGATE_FUNC",
+        "WINDOW_FUNC"
+    ],
+    "SIMPLE_FUNC": [
+        "GROUP_242 OPEN_PAR_T AUX_211 CLOSE_PAR_T"
+    ],
+    "AUX_211": [
+        "''",
+        "GROUP_243"
+    ],
+    "GROUP_242": [
+        "SIMPLE_FUNC_NAME_T",
+        "MAX_T",
+        "MIN_T"
+    ],
+    "GROUP_243": [
+        "GROUP_244",
+        "STAR_T"
+    ],
+    "GROUP_244": [
+        "EXPR AUX_212"
+    ],
+    "AUX_212": [
+        "''",
+        "GROUP_98 AUX_212"
+    ],
+    "AGGREGATE_FUNC": [
+        "GROUP_246 OPEN_PAR_T AUX_213 CLOSE_PAR_T AUX_214"
+    ],
+    "AUX_213": [
+        "''",
+        "GROUP_247"
+    ],
+    "AUX_214": [
+        "''",
+        "FILTER_CLAUSE"
+    ],
+    "GROUP_246": [
+        "AGGREGATE_FUNC_NAME_T",
+        "MAX_T",
+        "MIN_T"
+    ],
+    "GROUP_247": [
+        "GROUP_248",
+        "STAR_T"
+    ],
+    "GROUP_248": [
+        "AUX_215 GROUP_249"
+    ],
+    "AUX_215": [
+        "''",
+        "DISTINCT_T"
+    ],
+    "GROUP_249": [
+        "EXPR AUX_216"
+    ],
+    "AUX_216": [
+        "''",
+        "GROUP_98 AUX_216"
+    ],
+    "WINDOW_FUNC": [
+        "WINDOW_FUNC_NAME_T OPEN_PAR_T AUX_217 CLOSE_PAR_T AUX_214 OVER_T GROUP_254"
+    ],
+    "AUX_217": [
+        "''",
+        "GROUP_251"
+    ],
+    "GROUP_251": [
+        "GROUP_252",
+        "STAR_T"
+    ],
+    "GROUP_252": [
+        "EXPR AUX_219"
+    ],
+    "AUX_219": [
+        "''",
+        "GROUP_98 AUX_219"
+    ],
+    "GROUP_254": [
+        "WINDOW_DEFN",
+        "WINDOW_NAME"
+    ],
+    "SCOL_T": [
+        "';'"
+    ],
+    "DOT_T": [
+        "'.'"
+    ],
+    "OPEN_PAR_T": [
+        "'('"
+    ],
+    "CLOSE_PAR_T": [
+        "')'"
+    ],
+    "COMMA_T": [
+        "', '"
+    ],
+    "ASSIGN_T": [
+        "'='"
+    ],
+    "STAR_T": [
+        "'*'"
+    ],
+    "PLUS_T": [
+        "'+'"
+    ],
+    "MINUS_T": [
+        "'-'"
+    ],
+    "TILDE_T": [
+        "'~'"
+    ],
+    "PIPE2_": [
+        "'||'"
+    ],
+    "DIV_T": [
+        "'/'"
+    ],
+    "MOD_T": [
+        "'%'"
+    ],
+    "LT2_": [
+        "'<<'"
+    ],
+    "GT2_": [
+        "'>>'"
+    ],
+    "AMP_T": [
+        "'&'"
+    ],
+    "PIPE_T": [
+        "'|'"
+    ],
+    "LT_T": [
+        "'<'"
+    ],
+    "LT_EQ_T": [
+        "'<='"
+    ],
+    "GT_T": [
+        "'>'"
+    ],
+    "GT_EQ_T": [
+        "'>='"
+    ],
+    "EQ_T": [
+        "'=='"
+    ],
+    "NOT_EQ1_": [
+        "'!='"
+    ],
+    "NOT_EQ2_": [
+        "'<>'"
+    ],
+    "R_ARR1_": [
+        "'->'"
+    ],
+    "R_ARR2_": [
+        "'->>'"
+    ],
+    "ABORT_T": [
+        "' ABORT '"
+    ],
+    "ACTION_T": [
+        "' ACTION '"
+    ],
+    "ADD_T": [
+        "' ADD '"
+    ],
+    "AFTER_T": [
+        "' AFTER '"
+    ],
+    "ALL_T": [
+        "' ALL '"
+    ],
+    "ALTER_T": [
+        "' ALTER '"
+    ],
+    "ANALYZE_T": [
+        "' ANALYZE '"
+    ],
+    "AND_T": [
+        "' AND '"
+    ],
+    "AS_T": [
+        "' AS '"
+    ],
+    "ASC_T": [
+        "' ASC '"
+    ],
+    "ATTACH_T": [
+        "' ATTACH '"
+    ],
+    "AUTOINCREMENT_T": [
+        "' AUTOINCREMENT '"
+    ],
+    "BEFORE_T": [
+        "' BEFORE '"
+    ],
+    "BEGIN_T": [
+        "' BEGIN '"
+    ],
+    "BETWEEN_T": [
+        "' BETWEEN '"
+    ],
+    "BY_T": [
+        "' BY '"
+    ],
+    "CASCADE_T": [
+        "' CASCADE '"
+    ],
+    "CASE_T": [
+        "' CASE '"
+    ],
+    "CAST_T": [
+        "' CAST '"
+    ],
+    "CHECK_T": [
+        "' CHECK '"
+    ],
+    "COLLATE_T": [
+        "' COLLATE '"
+    ],
+    "COLUMN_T": [
+        "' COLUMN '"
+    ],
+    "COMMIT_T": [
+        "' COMMIT '"
+    ],
+    "CONFLICT_T": [
+        "' CONFLICT '"
+    ],
+    "CONSTRAINT_T": [
+        "' CONSTRAINT '"
+    ],
+    "CREATE_T": [
+        "' CREATE '"
+    ],
+    "CROSS_T": [
+        "' CROSS '"
+    ],
+    "CURRENT_DATE_T": [
+        "' CURRENT_DATE '"
+    ],
+    "CURRENT_TIME_T": [
+        "' CURRENT_TIME '"
+    ],
+    "CURRENT_TIMESTAMP__T": [
+        "' CURRENT_TIMESTAMP_T '"
+    ],
+    "DATABASE_T": [
+        "' DATABASE '"
+    ],
+    "DEFAULT_T": [
+        "' DEFAULT '"
+    ],
+    "DEFERRABLE_T": [
+        "' DEFERRABLE '"
+    ],
+    "DEFERRED_T": [
+        "' DEFERRED '"
+    ],
+    "DELETE_T": [
+        "' DELETE '"
+    ],
+    "DESC_T": [
+        "' DESC '"
+    ],
+    "DETACH_T": [
+        "' DETACH '"
+    ],
+    "DISTINCT_T": [
+        "' DISTINCT '"
+    ],
+    "DROP_T": [
+        "' DROP '"
+    ],
+    "EACH_T": [
+        "' EACH '"
+    ],
+    "ELSE_T": [
+        "' ELSE '"
+    ],
+    "END_T": [
+        "' END '"
+    ],
+    "ESCAPE_T": [
+        "' ESCAPE '"
+    ],
+    "EXCEPT_T": [
+        "' EXCEPT '"
+    ],
+    "EXCLUSIVE_T": [
+        "' EXCLUSIVE '"
+    ],
+    "EXISTS_T": [
+        "' EXISTS '"
+    ],
+    "EXPLAIN_T": [
+        "' EXPLAIN '"
+    ],
+    "FAIL_T": [
+        "' FAIL '"
+    ],
+    "FOR_T": [
+        "' FOR '"
+    ],
+    "FOREIGN_T": [
+        "' FOREIGN '"
+    ],
+    "FROM_T": [
+        "' FROM '"
+    ],
+    "FULL_T": [
+        "' FULL '"
+    ],
+    "GLOB_T": [
+        "' GLOB '"
+    ],
+    "GROUP_T": [
+        "' GROUP '"
+    ],
+    "HAVING_T": [
+        "' HAVING '"
+    ],
+    "IF_T": [
+        "' IF '"
+    ],
+    "IGNORE_T": [
+        "' IGNORE '"
+    ],
+    "IMMEDIATE_T": [
+        "' IMMEDIATE '"
+    ],
+    "IN_T": [
+        "' IN '"
+    ],
+    "INDEX_T": [
+        "' INDEX '"
+    ],
+    "INDEXED_T": [
+        "' INDEXED '"
+    ],
+    "INITIALLY_T": [
+        "' INITIALLY '"
+    ],
+    "INNER_T": [
+        "' INNER '"
+    ],
+    "INSERT_T": [
+        "' INSERT '"
+    ],
+    "INSTEAD_T": [
+        "' INSTEAD '"
+    ],
+    "INTERSECT_T": [
+        "' INTERSECT '"
+    ],
+    "INTO_T": [
+        "' INTO '"
+    ],
+    "IS_T": [
+        "' IS '"
+    ],
+    "ISNULL_T": [
+        "' ISNULL '"
+    ],
+    "JOIN_T": [
+        "' JOIN '"
+    ],
+    "KEY_T": [
+        "' KEY '"
+    ],
+    "LEFT_T": [
+        "' LEFT '"
+    ],
+    "LIKE_T": [
+        "' LIKE '"
+    ],
+    "LIMIT_T": [
+        "' LIMIT '"
+    ],
+    "MATCH_T": [
+        "' MATCH '"
+    ],
+    "MATERIALIZED_T": [
+        "' MATERIALIZED '"
+    ],
+    "NATURAL_T": [
+        "' NATURAL '"
+    ],
+    "NO_T": [
+        "' NO '"
+    ],
+    "NOT_T": [
+        "' NOT '"
+    ],
+    "NOTNULL_T": [
+        "' NOTNULL '"
+    ],
+    "NULL_T": [
+        "' NULL '"
+    ],
+    "OF_T": [
+        "' OF '"
+    ],
+    "OFFSET_T": [
+        "' OFFSET '"
+    ],
+    "ON_T": [
+        "' ON '"
+    ],
+    "OR_T": [
+        "' OR '"
+    ],
+    "ORDER_T": [
+        "' ORDER '"
+    ],
+    "OUTER_T": [
+        "' OUTER '"
+    ],
+    "PLAN_T": [
+        "' PLAN '"
+    ],
+    "PRAGMA_T": [
+        "' PRAGMA '"
+    ],
+    "PRIMARY_T": [
+        "' PRIMARY '"
+    ],
+    "QUERY_T": [
+        "' QUERY '"
+    ],
+    "RAISE_T": [
+        "' RAISE '"
+    ],
+    "RECURSIVE_T": [
+        "' RECURSIVE '"
+    ],
+    "REFERENCES_T": [
+        "' REFERENCES '"
+    ],
+    "REGEXP_T": [
+        "' REGEXP '"
+    ],
+    "REINDEX_T": [
+        "' REINDEX '"
+    ],
+    "RELEASE_T": [
+        "' RELEASE '"
+    ],
+    "RENAME_T": [
+        "' RENAME '"
+    ],
+    "REPLACE_T": [
+        "' REPLACE '"
+    ],
+    "RESTRICT_T": [
+        "' RESTRICT '"
+    ],
+    "ROLLBACK_T": [
+        "' ROLLBACK '"
+    ],
+    "ROW_T": [
+        "' ROW '"
+    ],
+    "ROWID_T": [
+        "' ROWID '"
+    ],
+    "ROWS_T": [
+        "' ROWS '"
+    ],
+    "SAVEPOINT_T": [
+        "' SAVEPOINT '"
+    ],
+    "SELECT_T": [
+        "' SELECT '"
+    ],
+    "SET_T": [
+        "' SET '"
+    ],
+    "STRICT_T": [
+        "' STRICT '"
+    ],
+    "TABLE_T": [
+        "' TABLE '"
+    ],
+    "TEMP_T": [
+        "' TEMP '"
+    ],
+    "TEMPORARY_T": [
+        "' TEMPORARY '"
+    ],
+    "THEN_T": [
+        "' THEN '"
+    ],
+    "TO_T": [
+        "' TO '"
+    ],
+    "TRANSACTION_T": [
+        "' TRANSACTION '"
+    ],
+    "TRIGGER_T": [
+        "' TRIGGER '"
+    ],
+    "UNION_T": [
+        "' UNION '"
+    ],
+    "UNIQUE_T": [
+        "' UNIQUE '"
+    ],
+    "UPDATE_T": [
+        "' UPDATE '"
+    ],
+    "USING_T": [
+        "' USING '"
+    ],
+    "VACUUM_T": [
+        "' VACUUM '"
+    ],
+    "VALUES_T": [
+        "' VALUES '"
+    ],
+    "VIEW_T": [
+        "' VIEW '"
+    ],
+    "VIRTUAL_T": [
+        "' VIRTUAL '"
+    ],
+    "WHEN_T": [
+        "' WHEN '"
+    ],
+    "WHERE_T": [
+        "' WHERE '"
+    ],
+    "WITH_T": [
+        "' WITH '"
+    ],
+    "WITHOUT_T": [
+        "' WITHOUT '"
+    ],
+    "OVER_T": [
+        "' OVER '"
+    ],
+    "PARTITION_T": [
+        "' PARTITION '"
+    ],
+    "RANGE_T": [
+        "' RANGE '"
+    ],
+    "RETURNING_T": [
+        "' RETURNING '"
+    ],
+    "PRECEDING_T": [
+        "' PRECEDING '"
+    ],
+    "UNBOUNDED_T": [
+        "' UNBOUNDED '"
+    ],
+    "CURRENT_T": [
+        "' CURRENT '"
+    ],
+    "FOLLOWING_T": [
+        "' FOLLOWING '"
+    ],
+    "GENERATED_T": [
+        "' GENERATED '"
+    ],
+    "ALWAYS_T": [
+        "' ALWAYS '"
+    ],
+    "STORED_T": [
+        "' STORED '"
+    ],
+    "TRUE_T": [
+        "' TRUE '"
+    ],
+    "FALSE_T": [
+        "' FALSE '"
+    ],
+    "WINDOW_T": [
+        "' WINDOW '"
+    ],
+    "NULLS_T": [
+        "' NULLS '"
+    ],
+    "FIRST_T": [
+        "' FIRST '"
+    ],
+    "LAST_T": [
+        "' LAST '"
+    ],
+    "FILTER_T": [
+        "' FILTER '"
+    ],
+    "GROUPS_T": [
+        "' GROUPS '"
+    ],
+    "EXCLUDE_T": [
+        "' EXCLUDE '"
+    ],
+    "TIES_T": [
+        "' TIES '"
+    ],
+    "OTHERS_T": [
+        "' OTHERS '"
+    ],
+    "DO_T": [
+        "' DO '"
+    ],
+    "NOTHING_T": [
+        "' NOTHING '"
+    ],
+    "COLLATION_NAME_T": [
+        "'BINARY'",
+        "'NOCASE'",
+        "'RTRIM'"
+    ],
+    "MIN_T": [
+        "'min'"
+    ],
+    "MAX_T": [
+        "'max'"
+    ],
+    "SIMPLE_FUNC_NAME_T": [
+        "'abs'",
+        "'changes'",
+        "'char'",
+        "'coalesce'",
+        "'format'",
+        "'glob'",
+        "'hex'",
+        "'ifnull'",
+        "'iif'",
+        "'instr'",
+        "'last_insert_rowid'",
+        "'length'",
+        "'like'",
+        "'likelihood'",
+        "'likely'",
+        "'load_extension'",
+        "'lower'",
+        "'ltrim'",
+        "'nullif'",
+        "'printf'",
+        "'quote'",
+        "'random'",
+        "'randomblob'",
+        "'replace'",
+        "'round'",
+        "'rtrim'",
+        "'sign'",
+        "'soundex'",
+        "'sqlite_compileoption_get'",
+        "'sqlite_compileoption_used'",
+        "'sqlite_offset'",
+        "'sqlite_source_id'",
+        "'sqlite_version'",
+        "'substr'",
+        "'substring'",
+        "'total_changes'",
+        "'trim'",
+        "'typeof'",
+        "'unicode'",
+        "'unlikely'",
+        "'upper'",
+        "'zeroblob'",
+        "'date'",
+        "'time'",
+        "'datetime'",
+        "'julianday'",
+        "'unixepoch'",
+        "'strftime'"
+    ],
+    "PRAGMA_NAME_T": [
+        "'analysis_limit'",
+        "'application_id'",
+        "'auto_vacuum'",
+        "'automatic_index'",
+        "'busy_timeout'",
+        "'cache_size'",
+        "'cache_spill'",
+        "'case_sensitive_like'",
+        "'cell_size_check'",
+        "'checkpoint_fullfsync'",
+        "'collation_list'",
+        "'compile_options'",
+        "'data_version'",
+        "'database_list'",
+        "'defer_foreign_keys'",
+        "'encoding'",
+        "'foreign_key_check'",
+        "'foreign_key_list'",
+        "'foreign_keys'",
+        "'freelist_count'",
+        "'fullfsync'",
+        "'function_list'",
+        "'hard_heap_limit'",
+        "'ignore_check_constraints'",
+        "'incremental_vacuum'",
+        "'index_info'",
+        "'index_list'",
+        "'index_xinfo'",
+        "'integrity_check'",
+        "'journal_mode'",
+        "'journal_size_limit'",
+        "'legacy_alter_table'",
+        "'legacy_file_format'",
+        "'locking_mode'",
+        "'max_page_count'",
+        "'mmap_size'",
+        "'module_list'",
+        "'optimize'",
+        "'page_count'",
+        "'page_size'",
+        "'parser_trace'",
+        "'pragma_list'",
+        "'query_only'",
+        "'quick_check'",
+        "'read_uncommitted'",
+        "'recursive_triggers'",
+        "'reverse_unordered_selects'",
+        "'schema_version'",
+        "'secure_delete'",
+        "'shrink_memory'",
+        "'soft_heap_limit'",
+        "'stats'",
+        "'synchronous'",
+        "'table_info'",
+        "'table_list'",
+        "'table_xinfo'",
+        "'temp_store'",
+        "'threads'",
+        "'trusted_schema'",
+        "'user_version'",
+        "'vdbe_addoptrace'",
+        "'vdbe_debug'",
+        "'vdbe_listing'",
+        "'vdbe_trace'",
+        "'wal_autocheckpoint'"
+    ],
+    "AGGREGATE_FUNC_NAME_T": [
+        "'avg'",
+        "'count'",
+        "'group_concat'",
+        "'sum'",
+        "'total'"
+    ],
+    "COLUMN_NAME_T": [
+        "'c0'",
+        "'c1'",
+        "'NEW.c0'",
+        "'NEW.c1'",
+        "'OLD.c0'",
+        "'OLD.c1'",
+        "'name'",
+        "'path'",
+        "'pageno'",
+        "'pagetype'",
+        "'ncell'",
+        "'payload'",
+        "'unused'",
+        "'mx_payload'",
+        "'pgoffset'",
+        "'pgsize'",
+        "'type'",
+        "'tbl_name'",
+        "'rootpage'",
+        "'sql'"
+    ],
+    "TABLE_NAME_T": [
+        "'t0'",
+        "'t1'",
+        "'t2'",
+        "'sqlite_schema'",
+        "'sqlite_temp_schema'",
+        "'dbstat'"
+    ],
+    "INDEX_NAME_T": [
+        "'index0'",
+        "'index1'"
+    ],
+    "TRIGGER_NAME_T": [
+        "'trig0'",
+        "'trig1'"
+    ],
+    "VIEW_NAME_T": [
+        "'view0'",
+        "'view1'"
+    ],
+    "SAVEPOINT_NAME_T": [
+        "'sav0'",
+        "'sav1'"
+    ],
+    "WINDOW_FUNC_NAME_T": [
+        "'row_number'",
+        "'rank'",
+        "'dense_rank'",
+        "'percent_rank'",
+        "'cume_dist'",
+        "'ntile'",
+        "'lag'",
+        "'lead'",
+        "'first_value'",
+        "'last_value'",
+        "'nth_value'"
+    ],
+    "WINDOW_NAME_T": [
+        "'win0'",
+        "'win1'"
+    ],
+    "SCHEMA_NAME_T": [
+        "'main'",
+        "'temp'"
+    ],
+    "ERROR_MESSAGE_T": [
+        "'\\'ahh\\''"
+    ],
+    "TYPE_BASE_NAME_T": [
+        "'INTEGER'",
+        "'REAL'",
+        "'TEXT'",
+        "'BLOB'"
+    ],
+    "CONSTRAINT_NAME_T": [
+        "'constr0'",
+        "'constr1'"
+    ],
+    "PRAGMA_SPECIAL_VALUE_T": [
+        "'UTF-8'",
+        "'UTF-16'",
+        "'UTF-16le'",
+        "'UTF-16be'",
+        "'TRUNCATE'",
+        "'PERSIST'",
+        "'MEMORY'",
+        "'WAL'",
+        "'OFF'",
+        "'NORMAL'",
+        "'FAST'",
+        "'PASSIVE'",
+        "'RESTAR_T'",
+        "'RESET'"
+    ],
+    "NUMERIC_LITERAL_T": [
+        "'0.0'",
+        "'0'",
+        "'7'",
+        "'3.14'",
+        "'0xda'",
+        "'42e-300'",
+        "'5e200'",
+        "'0xffff'"
+    ],
+    "STRING_LITERAL_T": [
+        "'\\'lit0\\''",
+        "'\\'\\''",
+        "'\\':memory:\\''",
+        "'\\'%Y-%m-%d\\''",
+        "'\\'%H:%M:%S.%f\\''",
+        "'\\'%J%j%w%s\\''",
+        "'\\'%%\\''",
+        "'\\'unixepoch\\''",
+        "'\\'auto\\''"
+    ],
+    "BLOB_LITERAL_T": [
+        "'X\\'53514C697465\\''"
+    ],
+    "NEWLINE_T": [
+        "'\\n'"
+    ]
+}

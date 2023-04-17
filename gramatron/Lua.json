@@ -1,0 +1,453 @@
+{
+    "AUX_1": [
+        "''",
+        "'.' IDENTIFIER ' ' ARGS",
+        "':' IDENTIFIER ' ' ARGS"
+    ],
+    "START": [
+        "PROGRAM"
+    ],
+    "PROGRAM": [
+        "AUX_2"
+    ],
+    "AUX_2": [
+        "GROUP_0",
+        "GROUP_0 AUX_2"
+    ],
+    "GROUP_0": [
+        "STATEMENT '\\n'"
+    ],
+    "STATEMENT": [
+        "'break'",
+        "VAR ' = ' EXPR",
+        "'local ' VARLIST ' = ' EXPRLIST",
+        "FUNCTION",
+        "COROUTINE",
+        "CONDITIONAL",
+        "LOOP",
+        "'return ' EXPRLIST",
+        "'goto ' LABELNAME",
+        "'::' LABELNAME '::'"
+    ],
+    "LABELNAME": [
+        "'labela'",
+        "'labelb'"
+    ],
+    "FUNCTION": [
+        "FUNCDEF ' (' FUNCTIONARGS ') ' PROGRAM '\\nend'"
+    ],
+    "FUNCDEF": [
+        "'function ' VAR '.' IDENTIFIER",
+        "'function ' VAR ':' IDENTIFIER",
+        "'function ' IDENTIFIER"
+    ],
+    "LAMBDA": [
+        "'function (' FUNCTIONARGS ') ' PROGRAM '\\nend'"
+    ],
+    "FUNCTIONARGS": [
+        "AUX_3"
+    ],
+    "AUX_3": [
+        "''",
+        "FUNCTIONARGLIST"
+    ],
+    "FUNCTIONARGLIST": [
+        "VAR ', ' FUNCTIONARGLIST",
+        "VAR",
+        "'...'"
+    ],
+    "COROUTINE": [
+        "VAR ' = coroutine.create(' LAMBDA ')'",
+        "VAR ' = coroutine.wrap(' LAMBDA ')'",
+        "'coroutine.resume(' VAR ', ' ARGS ')'",
+        "'coroutine.yield(' ARGS ')'"
+    ],
+    "ARGS": [
+        "'(' EXPRLIST ')'",
+        "TABLECONSTRUCTOR",
+        "LITERALSTRING"
+    ],
+    "CONDITIONAL": [
+        "'if ' EXPR ' then\\n' PROGRAM '\\nend'",
+        "'if ' EXPR ' then\\n' PROGRAM '\\nelse' PROGRAM '\\nend'"
+    ],
+    "LOOP": [
+        "'while (' EXPR ')\\ndo\\n' PROGRAM '\\nend'",
+        "'for ' VAR '=' EXPR ', ' EXPR ', ' EXPR '\\ndo\\n' PROGRAM '\\nend'",
+        "'repeat\\n' PROGRAM '\\nuntil (' EXPR ')'"
+    ],
+    "EXPRLIST": [
+        "EXPR ', ' EXPRLIST",
+        "EXPR"
+    ],
+    "EXPR": [
+        "'(nil)' AUX_1",
+        "'(false)' AUX_1",
+        "'(true)' AUX_1",
+        "'(' NUMERAL ')' AUX_1",
+        "LITERALSTRING AUX_1",
+        "TABLECONSTRUCTOR AUX_1",
+        "'(' VAR '[' EXPR '])' AUX_1",
+        "'(' EXPR BINOP EXPR ')' AUX_1",
+        "'(' UNOP EXPR ')' AUX_1",
+        "LAMBDA AUX_1",
+        "VAR AUX_1",
+        "IDENTIFIER ' ' ARGS AUX_1",
+        "'(' EXPR ')' AUX_1",
+        "'...' AUX_1"
+    ],
+    "BINOP": [
+        "'+'",
+        "'-'",
+        "'*'",
+        "'/'",
+        "'//'",
+        "'^'",
+        "'%'",
+        "'&'",
+        "'~'",
+        "'|'",
+        "'>>'",
+        "'<<'",
+        "' .. '",
+        "'<'",
+        "'<='",
+        "'>'",
+        "'>='",
+        "'=='",
+        "'~='",
+        "' and '",
+        "' or '"
+    ],
+    "UNOP": [
+        "'-'",
+        "' not '",
+        "'#'",
+        "'~'"
+    ],
+    "TABLECONSTRUCTOR": [
+        "'{' FIELDLIST '}'"
+    ],
+    "METATABLE": [
+        "VAR ' = setmetatable(' VAR ', ' TABLECONSTRUCTOR ')'"
+    ],
+    "FIELDLIST": [
+        "FIELD ',' FIELDLIST",
+        "FIELD"
+    ],
+    "FIELD": [
+        "'[' EXPR ']=' EXPR",
+        "IDENTIFIER '=' EXPR",
+        "EXPR"
+    ],
+    "VARLIST": [
+        "VAR ', ' VARLIST",
+        "VAR"
+    ],
+    "VAR": [
+        "'a'",
+        "'b'",
+        "'c'",
+        "'d'",
+        "'e'",
+        "'coroutine'",
+        "'math'",
+        "'io'",
+        "'os'",
+        "'package'",
+        "'string'",
+        "'table'",
+        "'utf8'",
+        "'self'"
+    ],
+    "LITERALSTRING": [
+        "'\"' STRING '\"'",
+        "'[[' STRING ']]'"
+    ],
+    "STRING": [
+        "AUX_4"
+    ],
+    "AUX_4": [
+        "''",
+        "STRCHR AUX_4"
+    ],
+    "STRCHR": [
+        "NEWLINE",
+        "'\\r'",
+        "' '",
+        "'\\t'",
+        "'0'",
+        "'/'",
+        "'.'",
+        "'$'",
+        "ESCAPESEQUENCE"
+    ],
+    "ESCAPESEQUENCE": [
+        "'\\\\a'",
+        "'\\\\b'",
+        "'\\\\f'",
+        "'\\\\n'",
+        "'\\\\r'",
+        "'\\\\t'",
+        "'\\\\v'",
+        "'\\\\z'",
+        "NEWLINE",
+        "'\\\\x' HEXADECIMAL",
+        "'\\\\u{' HEXADECIMAL '}'"
+    ],
+    "NEWLINE": [
+        "'\\n'"
+    ],
+    "NUMERAL": [
+        "DECIMAL",
+        "'0x' HEXADECIMAL"
+    ],
+    "DECIMAL": [
+        "AUX_5 AUX_6"
+    ],
+    "AUX_5": [
+        "DECIMALDIGIT",
+        "DECIMALDIGIT AUX_5"
+    ],
+    "AUX_6": [
+        "''",
+        "GROUP_1"
+    ],
+    "GROUP_1": [
+        "AUX_7 GROUP_3 AUX_8"
+    ],
+    "AUX_7": [
+        "''",
+        "GROUP_2"
+    ],
+    "AUX_8": [
+        "DECIMALDIGIT",
+        "DECIMALDIGIT AUX_8"
+    ],
+    "GROUP_2": [
+        "'.' AUX_9"
+    ],
+    "AUX_9": [
+        "DECIMALDIGIT",
+        "DECIMALDIGIT AUX_9"
+    ],
+    "GROUP_3": [
+        "'e'",
+        "'e-'"
+    ],
+    "HEXADECIMAL": [
+        "AUX_10 AUX_11"
+    ],
+    "AUX_10": [
+        "HEXDIGIT",
+        "HEXDIGIT AUX_10"
+    ],
+    "AUX_11": [
+        "''",
+        "GROUP_4"
+    ],
+    "GROUP_4": [
+        "AUX_12 GROUP_6 AUX_13"
+    ],
+    "AUX_12": [
+        "''",
+        "GROUP_5"
+    ],
+    "AUX_13": [
+        "HEXDIGIT",
+        "HEXDIGIT AUX_13"
+    ],
+    "GROUP_5": [
+        "'.' AUX_14"
+    ],
+    "AUX_14": [
+        "HEXDIGIT",
+        "HEXDIGIT AUX_14"
+    ],
+    "GROUP_6": [
+        "'p'",
+        "'p-'"
+    ],
+    "DECIMALDIGIT": [
+        "'0'",
+        "'1'",
+        "'2'",
+        "'3'",
+        "'4'",
+        "'5'",
+        "'6'",
+        "'7'",
+        "'8'",
+        "'9'"
+    ],
+    "HEXDIGIT": [
+        "'a'",
+        "'b'",
+        "'c'",
+        "'d'",
+        "'e'",
+        "'f'",
+        "'A'",
+        "'B'",
+        "'C'",
+        "'D'",
+        "'E'",
+        "'F'",
+        "DECIMALDIGIT"
+    ],
+    "IDENTIFIER": [
+        "'abs'",
+        "'acos'",
+        "'__add'",
+        "'asin'",
+        "'assert'",
+        "'atan'",
+        "'byte'",
+        "'__call'",
+        "'ceil'",
+        "'char'",
+        "'charpattern'",
+        "'clock'",
+        "'close'",
+        "'codepoint'",
+        "'codes'",
+        "'collectgarbage'",
+        "'__concat'",
+        "'concat'",
+        "'config'",
+        "'coroutine'",
+        "'cos'",
+        "'cpath'",
+        "'create'",
+        "'date'",
+        "'debug'",
+        "'deg'",
+        "'difftime'",
+        "'__div'",
+        "'dofile'",
+        "'dump'",
+        "'__eq'",
+        "'error'",
+        "'exit'",
+        "'exp'",
+        "'find'",
+        "'floor'",
+        "'flush'",
+        "'fmod'",
+        "'format'",
+        "'G'",
+        "'getenv'",
+        "'gethook'",
+        "'getinfo'",
+        "'getlocal'",
+        "'getmetatable'",
+        "'getregistry'",
+        "'getupvalue'",
+        "'getuservalue'",
+        "'gmatch'",
+        "'gsub'",
+        "'huge'",
+        "'__index'",
+        "'input'",
+        "'insert'",
+        "'io'",
+        "'ipairs'",
+        "'isyieldable'",
+        "'__le'",
+        "'len'",
+        "'lines'",
+        "'load'",
+        "'loaded'",
+        "'loadfile'",
+        "'loadlib'",
+        "'log'",
+        "'lower'",
+        "'__lt'",
+        "'match'",
+        "'math'",
+        "'max'",
+        "'maxinteger'",
+        "'min'",
+        "'mininteger'",
+        "'__mod'",
+        "'modf'",
+        "'move'",
+        "'__mul'",
+        "'__newindex'",
+        "'next'",
+        "'offset'",
+        "'open'",
+        "'os'",
+        "'output'",
+        "'pack'",
+        "'package'",
+        "'packsize'",
+        "'pairs'",
+        "'path'",
+        "'pcall'",
+        "'pi'",
+        "'popen'",
+        "'preload'",
+        "'print'",
+        "'rad'",
+        "'random'",
+        "'randomseed'",
+        "'rawequal'",
+        "'rawget'",
+        "'rawlen'",
+        "'rawset'",
+        "'read'",
+        "'remove'",
+        "'rename'",
+        "'rep'",
+        "'require'",
+        "'resume'",
+        "'reverse'",
+        "'running'",
+        "'searchers'",
+        "'searchpath'",
+        "'seek'",
+        "'select'",
+        "'self'",
+        "'sethook'",
+        "'setlocal'",
+        "'setlocale'",
+        "'setmetatable'",
+        "'setupvalue'",
+        "'setuservalue'",
+        "'setvbuf'",
+        "'sin'",
+        "'sort'",
+        "'sqrt'",
+        "'status'",
+        "'stderr'",
+        "'stdin'",
+        "'stdout'",
+        "'string'",
+        "'__sub'",
+        "'sub'",
+        "'table'",
+        "'tan'",
+        "'time'",
+        "'tmpfile'",
+        "'tmpname'",
+        "'tointeger'",
+        "'tonumber'",
+        "'__tostring'",
+        "'tostring'",
+        "'traceback'",
+        "'type'",
+        "'ult'",
+        "'__unm'",
+        "'unpack'",
+        "'upper'",
+        "'upvalueid'",
+        "'upvaluejoin'",
+        "'utf8'",
+        "'_VERSION'",
+        "'wrap'",
+        "'write'",
+        "'xpcall'",
+        "'yield'"
+    ]
+}
